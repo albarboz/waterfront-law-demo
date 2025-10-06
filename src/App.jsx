@@ -6,7 +6,7 @@ import { Contact } from "./components/contact";
 import Gallery from "./components/gallery";
 import ferryPhoto from "./assets/edmonds-ferry.webp";
 
-const Button = ({ href = "#", children, className = "", type = "button" }) => (
+export const Button = ({ href = "#", children, className = "", type = "button" }) => (
   <a
     href={href}
     className={`inline-block rounded-md bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition-transform duration-200 ease-in-out hover:scale-105 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${className}`}
@@ -124,9 +124,9 @@ const Img = ({ src = ferryPhoto, alt, width, height, className = "" }) => (
     decoding="sync"
     fetchpriority="high"
     className={`w-full ${className}`}
-    style={{ 
+    style={{
       ...(width && height ? {} : { aspectRatio: "16/9" }),
-      imageRendering: "-webkit-optimize-contrast"
+      imageRendering: "-webkit-optimize-contrast",
     }}
   />
 );
@@ -151,7 +151,7 @@ export default function App() {
               className="h-full w-full object-cover"
             />
             {/* This dark, semi-transparent layer sits on top of the image but behind the text. */}
-            <div className="absolute inset-0 bg-slate-900/60" />
+            <div className="absolute inset-0 bg-slate-900/70" />
           </div>
 
           {/* ---                      --- */}
@@ -160,7 +160,7 @@ export default function App() {
               The Waterfront Law Center
             </h1>
 
-            <p className="mt-6 mx-auto max-w-prose text-lg leading-relaxed text-slate-100 drop-shadow-sm text-shadow-lg/30 md:text-[22px] font-stretch-110% tracking-normal">
+            <p className="relative z-10 mt-6 mx-auto max-w-prose text-lg leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-[22px] tracking-normal">
               A Virtual Office Exclusively for Lawyers. Offering client meeting
               spaces and professional services for sole-practitioners and small
               firms, conveniently located next to the Edmonds-Kingston Ferry,
