@@ -11,26 +11,26 @@ export const About = () => {
           <strong>Waterfront Park Building</strong> in{" "}
           <strong>downtown Edmonds</strong>, next to the ferry terminal and
           other public transportation services. It provides a unique opportunity
-          for <strong>sole-practitioners and small firms </strong>to provide
+          for sole-practitioners and small firms to provide
           client services provided by larger firms, at a fraction of the fixed
           costs associated with the traditional 24/7 law firm model. It is
-          located <strong>18 miles north</strong> of the King County Courthouse
-          in Seattle and <strong>17 miles south</strong> of the Snohomish County
+          located 18 miles north of the King County Courthouse
+          in Seattle and 17 miles south of the Snohomish County
           Courthouse in Everett.{" "}
-          <strong>Regular ferry service within walking distance</strong> makes
+          Regular ferry service within walking distance makes
           it possible for lawyers living on the Olympic peninsula to maintain a
           very cost-effective office in the Seattle metro area.
         </p>
         <br />
         <p className="mt-1 max-w-prose text-base leading-relaxed text-slate-600">
-          Thanks to <strong>new electronic filing rules</strong>, it is no
+          Thanks to new electronic filing rules, it is no
           longer necessary to have an office in downtown Seattle. You can also{" "}
-          <strong>avoid the costs and commitment</strong> of a long-term lease,
+          avoid the costs and commitment of a long-term lease,
           furnishings, equipment, and a payroll. At the Waterfront Law Center,
-          you <strong>pay for only what you need, when you need it</strong>,
+          you pay for only what you need, when you need it,
           without any{" "}
-          <strong>compromise in the quality, service delivery,</strong> or the{" "}
-          <strong>appearance of your practice.</strong> You also have the extra
+          compromise in the quality, service delivery,or the{" "}
+          appearance of your practice.You also have the extra
           advantage of enjoying the collegiality and support of an association
           with many other lawyers with similar practices, professional interests
           and professional experiences.
@@ -38,9 +38,9 @@ export const About = () => {
         <br />
         <p className="mt-1 max-w-prose text-base leading-relaxed text-slate-600">
           The Waterfront Law Center provides services to attorneys on a
-          <strong> month-to-month</strong> basis for as little as{" "}
-          <strong>$500 per month</strong>. The{" "}
-          <strong>basic service package</strong> includes the following features
+          month-to-month basis for as little as{" "}
+          $500 per month. The{" "}
+          basic service package includes the following features
           and amenities:
         </p>
 
