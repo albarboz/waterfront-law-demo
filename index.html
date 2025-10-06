@@ -7,11 +7,17 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>waterfront-law-demo</title>
-    <!-- Inline critical CSS so the image is painted before React mounts -->
+  <!-- Inline critical CSS so the image is painted before React mounts -->
   <style>
     /* adjust selector to target your hero container (#root covers full viewport) */
-    html, body, #home { height: 100%; margin: 0; }
-    #home {
+    html,
+    body,
+    #root {
+      height: 100%;
+      margin: 0;
+    }
+
+    #root {
       background-image: url('/assets/edmonds-ferry.webp');
       background-size: cover;
       background-position: center;
@@ -25,6 +31,18 @@
 
 <body>
   <div id="root"></div>
+
+  <img src="/assets/edmonds-ferry.webp" alt="" decoding="async" loading="eager" fetchpriority="high"
+    style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;border:0;margin:0;padding:0;clip:rect(0 0 0 0);" />
+
+  <noscript>
+    <style>
+      /* Ensure non-JS users still see the hero */
+      #root {
+        background-image: url('/assets/edmonds-ferry.webp');
+      }
+    </style>
+  </noscript>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
