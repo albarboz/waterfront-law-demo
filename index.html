@@ -6,32 +6,36 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Waterfront Law Center | Edmonds, WA</title>
-  
-  <!-- Performance optimizations for Google Maps -->
-  <link rel="dns-prefetch" href="//maps.googleapis.com">
-  <link rel="dns-prefetch" href="//maps.gstatic.com">
-  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
-  
+
   <!-- Single preload - this is all you need! -->
   <link rel="preload" as="image" href="/src/assets/edmonds-ferry.webp" fetchpriority="high" />
-  
+  <link rel="preload"
+    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.966774643538!2d-122.38382402375545!3d47.81180417122176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901b8b832b872b%3A0x10344b58e7275782!2s144%20Railroad%20Ave%2C%20Edmonds%2C%20WA%2098020!5e0!3m2!1sen!2sus!4v1668822233157!5m2!1sen!2sus"
+    as="document" />
+
   <style>
     /* Simple critical CSS - just show the image immediately */
-    html, body, #root { height: 100%; margin: 0; }
+    html,
+    body,
+    #root {
+      height: 100%;
+      margin: 0;
+    }
+
     #root {
       background-image: url('/src/assets/edmonds-ferry.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-color: #334155; /* fallback color */
+      background-color: #334155;
+      /* fallback color */
     }
   </style>
 </head>
 
 <body>
   <div id="root"></div>
-  
+
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
