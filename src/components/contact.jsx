@@ -1,21 +1,21 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
 export const Contact = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   const handleGetDirections = useCallback(() => {
-    const address = encodeURIComponent("144 Railroad Avenue, Edmonds, WA 98020");
+    const address = encodeURIComponent(
+      "144 Railroad Avenue, Edmonds, WA 98020"
+    );
     const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
-    window.open(mapsUrl, '_blank');
+    window.open(mapsUrl, "_blank");
   }, []);
 
   return (
     <div className="grid gap-12 md:grid-cols-2">
       {/* Left Side: Contact Info */}
       <div className="space-y-4 text-lg">
-        <p className="font-semibold text-slate-900">
-          Waterfront Law Center
-        </p>
+        <p className="font-semibold text-slate-900">Waterfront Law Center</p>
         <address className="not-italic text-slate-600">
           Waterfront Park Building, Suite 308
           <br />
@@ -64,22 +64,22 @@ export const Contact = () => {
             title="Waterfront Law Center Location"
           />
         </div>
-        
+
         {/* Enhanced Directions Button */}
         <button
           onClick={handleGetDirections}
           className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
         >
-          <svg 
-            className="w-5 h-5" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
             />
           </svg>
@@ -90,25 +90,25 @@ export const Contact = () => {
         <div className="grid grid-cols-2 gap-3">
           <a
             href="tel:14255828165"
-            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 text-sm"
+            className="flex items-center justify-center gap-2 bg-teal-600  hover:bg-teal-700 active:bg-teal-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 text-sm"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
             Call Now
           </a>
           <a
             href="mailto:waterfrontlawcenter@gmail.com"
-            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 text-sm"
+            className="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 text-sm"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
             Email
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
