@@ -14,9 +14,10 @@ export const Contact = () => {
     <div className="grid gap-12 md:grid-cols-2">
       {/* Left Side: Contact Info */}
       <div className="space-y-4 text-lg">
-        <p className="font-semibold text-slate-900">Waterfront Law Center</p>
+        <p className="font-semibold text-slate-900">Gene Bolin</p>
+
         <address className="not-italic text-slate-600">
-          Waterfront Park Building, Suite 308
+          Waterfront Law Center, Suite 308
           <br />
           144 Railroad Avenue
           <br />
