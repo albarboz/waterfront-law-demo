@@ -33,6 +33,10 @@ export const Contact = () => {
           </a>
         </div>
         <div>
+          <strong className="text-slate-900">Fax:</strong>{" "}
+          <a className="text-teal-700 hover:text-teal-600">888.527.2710</a>
+        </div>
+        <div>
           <strong className="text-slate-900">Email:</strong>{" "}
           <a
             className="text-teal-700 hover:text-teal-600"
