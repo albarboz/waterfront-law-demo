@@ -2,24 +2,29 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import ferryPhoto from './assets/edmonds-ferry.webp'
+import { imagePreloader } from './utils/imagePreloader.js'
+import ferryUrl from '/src/assets/edmonds-ferry.webp?url'; // ensures correct resolution
 
+// Multiple preloading strategies for maximum speed
+const preloadHeroImage = async () => {
+  // Strategy 1: Link preload
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = ferryUrl;
+  link.fetchPriority = 'high';
+  document.head.appendChild(link);
 
-// Preload the Vite-resolved image URL so the browser fetches the exact file the build emits.
-const preloadImage = (href) => {
-  if (!href || typeof document === 'undefined') return
-  const link = document.createElement('link')
-  link.rel = 'preload'
-  link.as = 'image'
-  link.href = href
-  document.head.appendChild(link)
+  // Strategy 2: Advanced preloader
+  try {
+    await imagePreloader.preloadImage(ferryUrl);
+  } catch (error) {
+    console.warn('Advanced preload failed:', error);
+  }
+};
 
-  // Warm the browser cache immediately (optional)
-  const img = new Image()
-  img.src = href
-}
-
-preloadImage(ferryPhoto)
+// Start preloading immediately
+preloadHeroImage();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

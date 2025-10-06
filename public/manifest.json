@@ -1,0 +1,15 @@
+{
+  "name": "The Waterfront Law Center",
+  "short_name": "Waterfront Law",
+  "description": "A Virtual Office Exclusively for Lawyers in Edmonds, WA",
+  "theme_color": "#0f766e",
+  "background_color": "#334155",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

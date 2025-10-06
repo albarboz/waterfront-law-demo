@@ -114,17 +114,20 @@ const Navbar = () => {
 };
 
 /**
- * An image component with lazy loading enabled by default.
+ * An optimized image component for the hero ferry image.
  */
-const Img = ({ alt, width, height, className = "" }) => (
+const Img = ({ src = ferryPhoto, alt, width, height, className = "" }) => (
   <img
     loading="eager"
     alt={alt}
-    src={ferryPhoto}
+    src={src}
     decoding="sync"
     fetchpriority="high"
     className={`w-full ${className}`}
-    style={width && height ? undefined : { aspectRatio: "16/9" }}
+    style={{ 
+      ...(width && height ? {} : { aspectRatio: "16/9" }),
+      imageRendering: "-webkit-optimize-contrast"
+    }}
   />
 );
 
