@@ -3,34 +3,30 @@ import aboutPhoto from "../assets/bolingallery(1).webp";
 export const About = () => {
   return (
     <div className="grid grid-cols-1 items-start gap-y-10 gap-x-12 lg:grid-cols-12">
-      
       {/* Column 1: Content (mobile-first first) */}
-      <div className="order-2 lg:order-4 lg:col-span-6">
+      <div className="order-1 lg:order-1 lg:col-span-6">
         <p className="mt-0 max-w-prose text-base leading-relaxed text-slate-600">
           <strong>The Waterfront Law Center</strong> is located in the{" "}
           <strong>Waterfront Park Building</strong> in{" "}
           <strong>downtown Edmonds</strong>, next to the ferry terminal and
           other public transportation services. It provides a unique opportunity
-          for sole-practitioners and small firms to provide
-          client services provided by larger firms, at a fraction of the fixed
-          costs associated with the traditional 24/7 law firm model. It is
-          located 18 miles north of the King County Courthouse
-          in Seattle and 17 miles south of the Snohomish County
-          Courthouse in Everett.{" "}
-          Regular ferry service within walking distance makes
-          it possible for lawyers living on the Olympic peninsula to maintain a
-          very cost-effective office in the Seattle metro area.
+          for sole-practitioners and small firms to provide client services
+          provided by larger firms, at a fraction of the fixed costs associated
+          with the traditional 24/7 law firm model. It is located 18 miles north
+          of the King County Courthouse in Seattle and 17 miles south of the
+          Snohomish County Courthouse in Everett. Regular ferry service within
+          walking distance makes it possible for lawyers living on the Olympic
+          peninsula to maintain a very cost-effective office in the Seattle
+          metro area.
         </p>
         <br />
         <p className="mt-1 max-w-prose text-base leading-relaxed text-slate-600">
-          Thanks to new electronic filing rules, it is no
-          longer necessary to have an office in downtown Seattle. You can also{" "}
-          avoid the costs and commitment of a long-term lease,
-          furnishings, equipment, and a payroll. At the Waterfront Law Center,
-          you pay for only what you need, when you need it,
-          without any{" "}
-          compromise in the quality, service delivery,or the{" "}
-          appearance of your practice.You also have the extra
+          Thanks to new electronic filing rules, it is no longer necessary to
+          have an office in downtown Seattle. You can also avoid the costs and
+          commitment of a long-term lease, furnishings, equipment, and a
+          payroll. At the Waterfront Law Center, you pay for only what you need,
+          when you need it, without any compromise in the quality, service
+          delivery,or the appearance of your practice.You also have the extra
           advantage of enjoying the collegiality and support of an association
           with many other lawyers with similar practices, professional interests
           and professional experiences.
@@ -38,10 +34,8 @@ export const About = () => {
         <br />
         <p className="mt-1 max-w-prose text-base leading-relaxed text-slate-600">
           The Waterfront Law Center provides services to attorneys on a
-          month-to-month basis for as little as{" "}
-          $500 per month. The{" "}
-          basic service package includes the following features
-          and amenities:
+          month-to-month basis for as little as $500 per month. The basic
+          service package includes the following features and amenities:
         </p>
 
         {/* Amenities Checklist */}
@@ -56,7 +50,7 @@ export const About = () => {
       </div>
 
       {/* Column 2: Image */}
-      <figure className="order-2 lg:order-4 lg:col-span-6">
+      <figure className="order-2 lg:order-2 lg:col-span-6">
         {/* Tip: replace with an actual office/waterfront photo in your assets for best performance */}
         <img
           className="h-full w-full rounded-xl object-cover shadow-xl ring-1 ring-black/5"
@@ -107,4 +101,4 @@ export const About = () => {
       </figure>
     </div>
   );
-}
+};
