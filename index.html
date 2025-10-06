@@ -7,62 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Waterfront Law Center | Edmonds, WA</title>
   
-  <!-- PWA manifest -->
-  <link rel="manifest" href="/manifest.json" />
-  
-  <!-- Preload hero image with highest priority -->
+  <!-- Single preload - this is all you need! -->
   <link rel="preload" as="image" href="/src/assets/edmonds-ferry.webp" fetchpriority="high" />
   
-  <!-- DNS prefetch for potential external resources -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  
-  <!-- Preconnect to improve font loading if needed -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <!-- Inline critical CSS so the image is painted before React mounts -->
   <style>
-    /* Critical CSS to show hero image immediately */
-    html, body { height: 100%; margin: 0; padding: 0; }
+    /* Simple critical CSS - just show the image immediately */
+    html, body, #root { height: 100%; margin: 0; }
     #root {
-      height: 100vh;
       background-image: url('/src/assets/edmonds-ferry.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
-      /* Fallback gradient while image loads */
-      background-color: #334155;
-      background-image: linear-gradient(135deg, #334155 0%, #475569 100%);
-      /* Ensure immediate paint */
-      will-change: transform;
-    }
-    
-    /* Hide potential layout shift */
-    #root > div {
-      min-height: 100vh;
-    }
-    
-    /* Optimize image rendering */
-    img[src*="edmonds-ferry"] {
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+      background-color: #334155; /* fallback color */
     }
   </style>
 </head>
 
 <body>
   <div id="root"></div>
-  <!-- Eager helper to ensure immediate fetch of hero image -->
-  <img
-    src="/src/assets/edmonds-ferry.webp"
-    alt=""
-    decoding="sync"
-    loading="eager"
-    fetchpriority="high"
-    style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;border:0;margin:0;padding:0;clip:rect(0 0 0 0);z-index:-9999;" />
-
-  <noscript>
-    <style>#root { background-image: url('/assets/edmonds-ferry.webp'); }</style>
-  </noscript>
   
   <script type="module" src="/src/main.jsx"></script>
 </body>
