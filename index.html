@@ -7,6 +7,20 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>waterfront-law-demo</title>
+    <!-- Inline critical CSS so the image is painted before React mounts -->
+  <style>
+    /* adjust selector to target your hero container (#root covers full viewport) */
+    html, body, #root { height: 100%; margin: 0; }
+    #root {
+      background-image: url('/assets/edmonds-ferry.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* a fallback color while image loads */
+      background-color: #f3f4f6;
+      min-height: 100vh;
+    }
+  </style>
 </head>
 
 <body>

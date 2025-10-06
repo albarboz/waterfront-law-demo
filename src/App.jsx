@@ -116,14 +116,13 @@ const Navbar = () => {
 /**
  * An image component with lazy loading enabled by default.
  */
-const Img = ({ alt, sizes, width, height, className = "" }) => (
+const Img = ({ alt, width, height, className = "" }) => (
   <img
     loading="eager"
     alt={alt}
     src={ferryPhoto}
-    sizes={sizes}
-    width={width}
-    height={height}
+    decoding="sync"
+    fetchpriority="high"
     className={`w-full ${className}`}
     style={width && height ? undefined : { aspectRatio: "16/9" }}
   />
