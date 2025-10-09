@@ -26,7 +26,7 @@ export const About = () => {
           commitment of a long-term lease, furnishings, equipment, and a
           payroll. At the Waterfront Law Center, you pay for only what you need,
           when you need it, without any compromise in the quality, service
-          delivery,or the appearance of your practice.You also have the extra
+          delivery, or the appearance of your practice. You also have the extra
           advantage of enjoying the collegiality and support of an association
           with many other lawyers with similar practices, professional interests
           and professional experiences.
@@ -37,19 +37,9 @@ export const About = () => {
           month-to-month basis for as little as $500 per month. The basic
           service package includes the following features and amenities:
         </p>
-
-        {/* Amenities Checklist */}
-
-        <div className="mt-8">
-          {/* <Button href="tel:14255828165">
-            <span className="focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-600">
-              Call 425.582.8165
-            </span>
-          </Button> */}
-        </div>
       </div>
 
-      {/* Column 2: Image */}
+      {/* Column 2: Image & Amenities Checklist */}
       <figure className="order-2 lg:order-2 lg:col-span-6">
         {/* Tip: replace with an actual office/waterfront photo in your assets for best performance */}
         <img
@@ -61,6 +51,8 @@ export const About = () => {
           height={1067}
           sizes="(min-width: 1024px) 50vw, 100vw"
         />
+
+        {/* Amenities Checklist */}
         <div className="mt-8">
           <ul
             className="space-y-3 text-base text-slate-700"
